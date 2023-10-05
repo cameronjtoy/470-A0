@@ -47,8 +47,8 @@ int main(int argc, char* argv[]) {
     auto t0 = std::chrono::steady_clock::now();
 
     // call sequential or parallel solver (choose one)
-    // dmv(n, m, A.data(), x.data(), y.data());
-    omp_dmv(n, m, A.data(), x.data(), y.data());
+    dmv(n, m, A.data(), x.data(), y.data());
+    // omp_dmv(n, m, A.data(), x.data(), y.data());
 
     auto t1 = std::chrono::steady_clock::now();
 
